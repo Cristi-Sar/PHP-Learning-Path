@@ -1,0 +1,6 @@
+Mango,
+Pera,
+Cereza,
+Fresa,
+Melon, 
+Sandia.
