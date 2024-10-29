@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cristina Yoselin Sarmiento Mociños">
+    <title>Tipo de formulario: checkbox, button</title>
+   
+    <!--Damos estilo a nuestro formulario-->
+    
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(66, 99, 207);
+          background-size: cover;
+      }
+      h2 {
+          padding: 10px;
+          border-radius: 5px;
+      }
+      form {
+          background-color: #f9f9f9;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          max-width: 400px;
+          width: 100%;
+      }
+      label {
+          margin-right: 10px;
+      }
+      input[type="checkbox"] {
+          margin-right: 5px;
+      }
+      .button-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+      }
+      button[type="submit"], button[type="button"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      button[type="submit"]:hover {
+          background-color: #45a049;
+      }
+      button[type="button"] {
+          background-color: #008CBA;
+      }
+      button[type="button"]:hover {
+          background-color: #007bb5;
+      }
+    </style>
+    
+</head>
+<body>
+      
+    <p style="color: rgb(14, 9, 11);"><i>El tipo de entrada Checkbox permite al <br> usuario seleccionar una o más,<br>opciones de un conjunto de opciones </i></p>
+    <br>
+    <br>
+
+
+      <form action="formulario6_7.php" target="_parent" method="POST">
+      
+     <!--Indicamos que el tipo de entrada es Checkbox y decimos que nuestra variable que va a guardar todas las opciones que elija el usuario va a ser un array es decir hobbies[]-->
+        <input type="checkbox" id="música" name="hobbies[]" value="música">  
+        <label for="música">Música</label><br>
+
+        <input type="checkbox" id="lectura" name="hobbies[]" value="lectura">
+        <label for="lectura">Leer</label><br>
+
+        <input type="checkbox" id="deportes" name="hobbies[]" value="deportes">
+        <label for="deportes">Deportes</label><br>
+
+        <br>
+
+        <button type="submit">Enviar Formulario</button>  <!--Una forma de enviar un formulario-->
+
+      </form>
+      
+      <br><br>
+
+     <!--Otra forma de utilizar button-->
+
+       <!--<button type ="button" onclick="alert('Hello World')">Pulsa este botón</button>  (Otra manera de usar la etiqueta button)--> 
+</body>
+</html>

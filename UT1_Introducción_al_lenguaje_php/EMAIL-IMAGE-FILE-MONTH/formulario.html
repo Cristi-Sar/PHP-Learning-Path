@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de entrada: email, image, file, month</title>
+ 
+   <!-- linear-gradient(to right, #ff7e5f, #feb47b);--> 
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background: url('imagenes/imagen.jpg') no-repeat center center/cover;
+          background-size: cover;
+          color: rgb(66, 53, 243);
+      }
+      form {
+          background: white;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          max-width: 400px;
+          width: 100%;
+      }
+      h2 {
+          background-color: rgb(230, 90, 113);
+          color: white;
+          text-align: center;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 20px;
+      }
+      label {
+          display: block;
+          margin-bottom: 10px;
+          font-weight: bold;
+      }
+      input[type="email"],
+      input[type="file"],
+      input[type="month"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+      input[type="submit"] {
+          width: 100%;
+          padding: 10px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+      input[type="submit"]:hover {
+          background-color: #45a049;
+      }
+  </style>
+
+</head>
+<body style="color: rgb(66, 53, 243);">
+ 
+    
+  <form action="formulario_1.php" target="_blank" method="POST" enctype="multipart/form-data">
+
+    <label for="correo"><b>Correo electrónico: </b></label>
+    <input type="email" id="correo" name="correo" value="email"><br><br>
+    
+    <label for="file"><b>Selecciona un archivo:</b></label>
+    <input type="file" id="archivo" name="archivo" required><br><br>
+
+
+    <label for="imagen"><b>Selecciona una imágen:</b></label>
+    <input type="file" id="image" name="image" accept="image/*" required >
+
+    <br><br>
+
+    <label for="mes">Elige un mes:</label><br><br>
+    <input type="month" id="mes" name="mes" required><br><br>
+
+
+    <input type="submit" value="Enviar Formulario">
+
+  </form>
+
+</body>
+</html>

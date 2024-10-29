@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Cristina Yoselin Sarmiento Mociños">
+    <title>Tipo de entrada: color, date</title>
+    
+   <!--Agregamos un poco de estilo para el formulario--> 
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('imagenes/imagenDos.jpg') no-repeat center center/cover;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            color: rgb(221, 53, 109);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="date"],
+        input[type="color"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <form action="formulario8_9.php" target="_blank" method="POST">  
+
+        <h2 style="color: rgb(221, 53, 109);">Formulario</h2>
+
+        <label for="fecha"><b>Fecha de hoy:</b></label>
+        <input type="date" id="fecha" name="fecha" value="fecha"><br><br>
+
+        <label for="color"><b>Elige tu color favorito:</b></label><br><br>
+        <input type="color" id="color" name="colores" value="#ff0000"><br> 
+
+        <br>
+
+        <button type="submit">Enviar formulario</button>
+
+    </form>
+</body>
+</html>

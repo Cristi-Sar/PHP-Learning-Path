@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de formulario: Text</title>
+
+    <style>
+        body {
+            
+        font-family: 'Arial', sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background: url('imagenes/imagenDos.jpeg') no-repeat center center/cover;
+          background-size: cover;
+          color: rgb(66, 53, 243);
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            background-color: palevioletred;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #e926bf;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: #e926bf;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <form action="formulario1_1.php" method="POST">    
+        <label for="nombre">Jugador/a:</label>
+        <input type="text" id="nombre" name="nombre">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

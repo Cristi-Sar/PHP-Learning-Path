@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    
+    <!--Estilo para darle un poco de forma al formulario-->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        height: 100vh;  
+        margin: 0;  
+        background: url('imagenes/imagenUno.png') no-repeat center center fixed;  
+        background-size: cover;  
+        color: rgb(66, 53, 243);  
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h2, h3 {
+            background-color: palevioletred;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            flex: 1 1 100%;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            flex: 1 1 calc(50% - 10px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group input[type="date"],
+        .form-group input[type="time"],
+        .form-group input[type="range"],
+        .form-group input[type="search"] {
+            flex: 1 1 100%;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #061606;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: #060a06c5;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    
+    
+    <!--Con form indicamos un formulario, action, especifica la URL a la que se enviaran los datos del formulario  , target indica que ese archivo se va a ..-->
+    <!--abrir en una nueva pestaña, y por ultimo el el atributo POST indica el metedo HTTP que se utilizara para enviar los datos del formulario.-->
+
+    <form action="formulario_1.php" target="_blank" method="POST">
+    
+        <h2 style="background-color: rgba(110, 94, 2, 0.685);">Seleccione la Fecha y Hora de su Cita: </h2><br>
+
+        <label for="fecha">Fecha: <br></label><br>
+        <input type="date" id="fecha" name="fecha" required><br><br>
+
+        <label for="hora">Hora: <br></label><br>
+        <input type="time" id="hora" name="hora"><br><br>
+          
+        <h2 style="background-color: rgba(110, 94, 2, 0.685);">Información Personal: </h2>
+        <!--Primera parte del formulario datos personales-->
+        <label for="nombre">Nombre: </label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellidos: </label><br>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <label for="clave">Clave: </label><br>
+        <input type="password" id="clave" name="clave" required><br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefono">Teléfono: </label><br>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <input type="hidden" name="usuario_id" value="258558">
+
+
+        <h2 style="background-color: rgb(110, 94, 2,  0.685);">Preferencias para la Consulta:</h2>
+
+        <!-- Seleccionar el volumen para la consulta online -->
+        <label for="volumen">Ajusta tu volumen para tu cita online:</label><br>
+        <input type="range" id="volumen" name="volumen" min="0" max="100" step="1"><br><br>
+
+        <!-- Buscar información adicional en el sitio de la clínica -->
+        <label for="buscar">Busca la página web de la clinica:</label><br>
+        <input type="search" id="buscar" name="buscar" placeholder="Buscar..."><br><br>
+
+        <!-- Botón de envío -->
+        <input type="submit" value="Registrar Cita">
+          
+    </form>
+</body>
+</html>
